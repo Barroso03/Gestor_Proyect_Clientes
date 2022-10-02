@@ -17,12 +17,12 @@ class TestDatabase(unittest.TestCase):
    self.assertIsNotNone(cliente_existente)
    self.assertIsNone(cliente_no_existente)
  
-  def test_crear_cliente(self):
+ def test_crear_cliente(self):
     nuevo_cliente = db.Clientes.crear('39X', 'Héctor', 'Costa')
-  self.assertEqual(len(db.Clientes.lista), 4)
-  self.assertEqual(nuevo_cliente.dni, '39X')
-  self.assertEqual(nuevo_cliente.nombre, 'Héctor')
- self.assertEqual(nuevo_cliente.apellido, 'Costa')
+    self.assertEqual(len(db.Clientes.lista), 4)
+    self.assertEqual(nuevo_cliente.dni, '39X')
+    self.assertEqual(nuevo_cliente.nombre, 'Héctor')
+    self.assertEqual(nuevo_cliente.apellido, 'Costa')
 
  def test_modificar_cliente(self):
    cliente_a_modificar = copy.copy(db.Clientes.buscar('28Z'))

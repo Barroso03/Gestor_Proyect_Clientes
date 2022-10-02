@@ -18,5 +18,5 @@ def dni_valido(dni, lista):
    for cliente in lista:
      if cliente.dni == dni:
        print("DNI utilizado por otro cliente.")
-     return False
-    return True
+       return False
+     return True

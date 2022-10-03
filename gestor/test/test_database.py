@@ -26,8 +26,7 @@ class TestDatabase(unittest.TestCase):
 
  def test_modificar_cliente(self):
    cliente_a_modificar = copy.copy(db.Clientes.buscar('28Z'))
-   cliente_modificado = db.Clientes.modificar('28Z', 'Mariana',
-'Pérez')
+   cliente_modificado = db.Clientes.modificar('28Z', 'Mariana','Pérez')
    self.assertEqual(cliente_a_modificar.nombre, 'Ana')
    self.assertEqual(cliente_modificado.nombre, 'Mariana')
    

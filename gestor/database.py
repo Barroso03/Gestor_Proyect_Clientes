@@ -1,4 +1,7 @@
+import database as db
+
 class Cliente:
+  
  def __init__(self, dni, nombre, apellido):
    self.dni = dni
    self.nombre = nombre
@@ -6,9 +9,15 @@ class Cliente:
  def __str__(self):
    return f"({self.dni}) {self.nombre} {self.apellido}"
 
+
+
 class Clientes:
- # Lista de clientes
-   lista = []
+  # Lista de clientes
+   lista = [
+   db.Cliente('15J', 'Marta', 'Pérez'),
+   db.Cliente('48H', 'Manolo', 'López'),
+   db.Cliente('28Z', 'Ana', 'García')
+ ]
    @staticmethod
    def buscar(dni):
      for cliente in Clientes.lista:
